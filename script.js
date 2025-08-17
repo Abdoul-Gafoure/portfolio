@@ -28,52 +28,24 @@ let writer = new Typewriter(txtAnim, {
 writer
     .pauseFor(1800)
     .changeDelay(20)
-    .typeString("Salut! c'est <strong>TOGUÈ</strong>, je suis ")
+    .typeString("Salut! c'est <strong>GAFOURE</strong>, je suis ")
     .pauseFor(500)
-    .typeString("<strong>Développeur Full-Stack</strong> !")
+    .typeString("<strong>Développeur web et system</strong> !")
     .pauseFor(1500)
-    .deleteChars(12)
+    .deleteChars(15)
     .typeString("<span style='color: red;'>HTML </span> <span style='color: purple;'>CSS</span>!")
     .pauseFor(1500)
     .deleteChars(10)
     .typeString("<span style='color: yellow;'>JavaScript</span> !")
     .pauseFor(1500)
     .deleteChars(12)
-    .typeString("<span style='color: blue;'>SQL</span> !")
-    .pauseFor(1500)
-    .deleteChars(5)
     .typeString("<span style='color: lightskyblue;'>React js</span> !")
     .pauseFor(1500)
     .deleteChars(10)
-    .typeString("<span style='color: green;'>Vue js</span> !")
-    .pauseFor(1500)
-    .deleteChars(8)
-    .typeString("<span style='color: orange;'>Node js /Express </span> !")
+    .typeString("<span style='color: orange;'>C#</span> !")
     .pauseFor(5000)
     .start();
 
-// === Générateur de citations ===
-
-const citations = [
-    "Le succès est la somme de petits efforts répétés jours après jours",
-    "La seule limite à notre épanouissement de demain sera nos doutes d'aujourd'hui.",
-    "Le bonheur n'est pas quelque chose que vous reportez à plus tard, c'est quelque chose que vous concevez pour le présent.",
-    "Votre temps est limité, ne le gâchez pas en vivant la vie de quelqu'un d'autre.",
-    "Vis ta vie de telle sorte que tes actions soient compatibles avec la permanence d'une vie authentiquement humaine sur Terre.",
-    "Celui qui a un pourquoi pour vivre peut supporter n'importe quel comment.",
-    "Choisissez un travail que vous aimez, et vous n'aurez jamais à travailler un seul jour de votre vie.",
-    "Le temps est un voleur. Il emporte tout ce que nous avons.",
-    "Je ne perds jamais. Soit je gagne, soit j'apprends.",
-    "On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux."
-];
-
-const genereCitation = document.querySelector(".genere");
-const newRessult = document.querySelector(".result");
-
-newRessult.addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * citations.length);
-    genereCitation.textContent = citations[randomIndex];
-});
 
 // === Animations GSAP et ScrollMagic ===
 

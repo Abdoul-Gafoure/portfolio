@@ -457,64 +457,6 @@ h1 {
     background-color: #901faa;
 }
 
-.b7 {
-    width: 80%;
-    background-color: #ade5f3;
-}
-
-.b8 {
-    width: 50%;
-    background-color: #ff600a;
-}
-
-/*---------Section citations--------*/
-
-.citations {
-    background: url('ressource/reflextion.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    padding-left: 250px;
-    padding-bottom: 30px;
-    width: 100%;
-    margin: auto;
-    height: 500px;
-}
-.citation {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding: 20px;
-}
-.citations h2 {
-    text-align: center;
-    border-radius: 3px;
-    font-size: 60px;
-    padding-top: 50px;
-    color: #ffffff;
-}
-.genere {
-    font-size: 30px;
-    color: #f1f1f1;
-}
-.result {
-    border-radius: 4px;
-    background-color: #5a5a5a;
-    color: white;
-    height: 30px;
-    width: 150px;
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-}
-.result:hover {
-    background-color: #92989e;
-}
-
 /*-------------------Section experiences------------*/
 
 .experiences {
@@ -670,24 +612,22 @@ h1 {
     padding-left: 250px;
 }
 
-/* Base pour le conteneur du formulaire */
 .form-group {
     position: relative;
     margin-bottom: 45px;
-    /* display: flex;  peut être supprimé si non nécessaire pour d'autres éléments */
 }
 
 /* Style du label au repos */
 .form-group label {
     position: absolute;
-    top: 50%; /* Centre verticalement le label par rapport à l'input */
+    top: 50%; 
     left: 0;
-    transform: translateY(-50%); /* Ajuste le positionnement pour un centrage parfait */
+    transform: translateY(-50%); 
     color: #aaa;
-    transition: 0.4s ease-out; /* Transition douce pour le mouvement */
+    transition: 0.4s ease-out; 
     font-size: 20px;
-    pointer-events: none; /* Empêche le label de bloquer les clics sur l'input */
-    z-index: 1; /* Assure que le label est au-dessus de l'input */
+    pointer-events: none; 
+    z-index: 1; 
 }
 
 /* Styles des inputs et textarea */
@@ -699,7 +639,7 @@ h1 {
     outline: none;
     background: none;
     border-bottom: 3px solid #aaa;
-    color: gray; /* Couleur du texte saisi */
+    color: gray; 
     font-size: 20px;
     transition: 0.4s ease-out;
 }
@@ -710,7 +650,7 @@ textarea {
     border: none;
     border: 3px solid #aaa;
     border-radius: 3px;
-    resize: vertical; /* Permet de redimensionner verticalement le textarea */
+    resize: vertical; 
     outline: none;
     padding: 5px;
     font-size: 20px;
@@ -718,19 +658,17 @@ textarea {
     background: #f1f1f1;
 }
 
-/* Lorsque le form-group (qui contient input/label) est focus OU que la classe animation est présente */
-.form-group:focus-within label, /* Gère le focus */
-.form-group.has-content label { /* Nouvelle classe pour le contenu */
-    top: 0; /* Remonte le label en haut */
-    transform: translateY(-100%); /* Ajuste le positionnement */
-    color: #8b97d7; /* Couleur du label remonté */
-    font-size: 16px; /* Taille réduite pour le label remonté */
-    background-color: transparent; /* Assurez-vous qu'il n'y a pas de fond qui cache le texte */
-    padding-left: 0; /* Ajustez si un padding était appliqué */
-    padding-right: 0; /* Ajustez si un padding était appliqué */
+.form-group:focus-within label, 
+.form-group.has-content label { 
+    top: 0; 
+    transform: translateY(-100%); 
+    color: #8b97d7; 
+    font-size: 16px; 
+    background-color: transparent; 
+    padding-left: 0;
+    padding-right: 0; 
 }
 
-/* Styles pour le placeholder du textarea (aucun changement) */
 textarea::placeholder {
     font-size: 20px;
     opacity: 0.5;
@@ -740,7 +678,6 @@ textarea:focus {
     border-color: #7587ec;
 }
 
-/* Styles du bouton (aucun changement) */
 .form-group:nth-child(4) {
     margin-bottom: 25px;
     justify-content: flex-start;
