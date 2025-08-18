@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    background-color: hsla(0, 1%, 65%, 0.858);
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    color: #8707ff;
+}
+p {
+     margin-bottom: 40px;
+    font-weight: 700;
+    font-style: italic;
+    color: oklab(100% 0 -0.00011);
+    line-height: 1.6;
+    text-align: center;
+}
+.video {
+
+   width: 100%;
+   height: auto;
+   margin: 20px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+.video video {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.video video:focus {
+  outline: 2px solid #8707ff;
+  transform: scale(1.05);
+}

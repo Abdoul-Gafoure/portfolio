@@ -42,10 +42,22 @@ writer
     .typeString("<span style='color: lightskyblue;'>React js</span> !")
     .pauseFor(1500)
     .deleteChars(10)
-    .typeString("<span style='color: orange;'>C#</span> !")
+    .typeString("<span style='color: orange;'>C</span> !")
     .pauseFor(5000)
     .start();
 
+const pAnim = document.querySelector(".paragraph");
+let writerP = new Typewriter(pAnim, {
+    loop: true,
+    deleteSpeed: 20,
+});
+
+writerP
+    .pauseFor(1800)
+    .changeDelay(20)
+    .typeString("Bienvenue sur la page de présentation de mes projets ARDUINO")
+    .pauseFor(500)
+    .start();
 
 // === Animations GSAP et ScrollMagic ===
 
@@ -130,7 +142,7 @@ contactForm.addEventListener('submit', function(event) {
 
     const encodedMessage = encodeURIComponent(fullMessage);
 
-    const phoneNumber = '22656995313';
+    const phoneNumber = '22655197506';
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

@@ -111,7 +111,7 @@ body {
 .accueil {
     width: 100%;
     margin: auto;
-    background: url('ressource/Laptop.jpg');
+    background: url('ressource/reparation-dobjet-informatique-garantissez-la-securite-de-vos-appareils-electroniques.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -125,6 +125,7 @@ h1 {
     font-size: 70px;
     font-family: 'preconnect', sans-serif;
     padding-top: 50px;
+    color: rgb(72, 22, 235);
 }
 
 .animation {
@@ -165,6 +166,7 @@ h1 {
 .medias {
     width: auto;
     margin-top: 20px;
+    margin-left: 450px;
     height: auto;
     display: flex;
     align-items: center;
@@ -178,7 +180,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.5;
+    opacity: 1;
 }
 .logo-medias img {
     width: 50px;
@@ -429,17 +431,17 @@ h1 {
 }
 
 .b1 {
-    width: 95%;
+    width: 60%;
     background-color: #c57272;
 }
 
 .b2 {
-    width: 95%;
+    width: 80%;
     background-color: greenyellow;
 }
 
 .b3 {
-    width: 80%;
+    width: 40%;
     background-color: rgb(234, 234, 21);
 }
 
@@ -448,12 +450,12 @@ h1 {
 }
 
 .b5 {
-    width: 75%;
+    width: 50%;
     background-color: rgb(79, 214, 238);
 }
 
 .b6 {
-    width: 80%;
+    width: 50%;
     background-color: #901faa;
 }
 
@@ -639,7 +641,7 @@ h1 {
     outline: none;
     background: none;
     border-bottom: 3px solid #aaa;
-    color: gray; 
+    color: rgb(0, 0, 0); 
     font-size: 20px;
     transition: 0.4s ease-out;
 }
@@ -705,7 +707,7 @@ textarea:focus {
 
 footer {
     background-color: #333;
-    height: 110px;
+    height: 210px;
     margin: 0 10px;
     width: 100%;
     padding-top: 50px;
@@ -717,6 +719,7 @@ footer p {
     text-align: center;
     font-size: 16px;
 }
+
 
 /* ----Section medias queris------ */
 
