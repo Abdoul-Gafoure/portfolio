@@ -20,12 +20,12 @@ if (window.matchMedia('(max-width: 1200px)').matches) {
 
 // === Animation Typewriter ===
 const txtAnim = document.querySelector(".animation");
-let writer = new Typewriter(txtAnim, {
+let writerp = new Typewriter(txtAnim, {
     loop: true,
     deleteSpeed: 20,
 });
 
-writer
+writerp
     .pauseFor(1800)
     .changeDelay(20)
     .typeString("Salut! c'est <strong>GAFOURE</strong>, je suis ")
@@ -47,12 +47,12 @@ writer
     .start();
 
 const pAnim = document.querySelector(".paragraph");
-let writerP = new Typewriter(pAnim, {
+let writer = new Typewriter(pAnim, {
     loop: true,
     deleteSpeed: 20,
 });
 
-writerP
+writer
     .pauseFor(1800)
     .changeDelay(20)
     .typeString("Bienvenue sur la page de présentation de mes projets ARDUINO")
