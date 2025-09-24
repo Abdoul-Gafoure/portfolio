@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechnoFix Pro - Réparation Électronique Industrielle</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#8B5CF6'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./GafoureService.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+  <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <nav class="px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <h1 class="text-2xl font-['Pacifico'] text-primary">TechnoFix Pro</h1>
+        <p class="text-xs text-gray-500 ml-2">par Abdoul Gafoure Kaboré</p>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-300">Services</a>
+        <a href="#portfolio" class="text-gray-700 hover:text-primary transition-colors duration-300">Réalisations</a>
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-300">Expertise</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center">
+        <i class="ri-menu-line text-xl"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+      <div class="px-6 py-4 space-y-4">
+        <a href="#services" class="block text-gray-700 hover:text-primary">Services</a>
+        <a href="#portfolio" class="block text-gray-700 hover:text-primary">Réalisations</a>
+        <a href="#about" class="block text-gray-700 hover:text-primary">Expertise</a>
+        <a href="#contact" class="block text-gray-700 hover:text-primary">Contact</a>
+      </div>
+    </div>
+  </header>
+  <section class="relative h-screen hero-bg flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent animate-pulse-slow"></div>
+    <div class="absolute top-10 right-10 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
+    <div class="absolute bottom-20 left-20 w-16 h-16 bg-secondary/20 rounded-full animate-float-delayed"></div>
+    <div class="absolute top-1/3 right-1/4 w-12 h-12 bg-primary/10 rounded-full animate-bounce-slow"></div>
+    <div class="relative w-full px-6 max-w-7xl mx-auto">
+      <div id="slider" class="relative">
+        <div class="slide slide-active">
+          <div class="max-w-2xl">
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Experts en <span class="text-primary">électronique industrielle</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Spécialistes de la réparation d'automates programmables, programmation en C et maintenance d'équipements
+              électroniques industriels.
+            </p>
+            <button
+              class="bg-primary text-white px-8 py-4 !rounded-button text-lg font-semibold hover:bg-blue-600 transition-colors duration-300 whitespace-nowrap">
+              Découvrir nos services
+            </button>
+          </div>
+        </div>
+        <div class="slide slide-inactive absolute top-0 left-0 w-full">
+          <div class="max-w-2xl">
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Programmation <span class="text-secondary">automates PLC</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Développement et programmation d'automates industriels en langage C, configuration et optimisation de vos
+              systèmes automatisés.
+            </p>
+            <button id="voir-creations-btn"
+              class="bg-secondary text-white px-8 py-4 !rounded-button text-lg font-semibold hover:bg-purple-600 transition-colors duration-300 whitespace-nowrap">
+              Voir nos réalisations
+            </button>
+          </div>
+        </div>
+        <div class="slide slide-inactive absolute top-0 left-0 w-full">
+          <div class="max-w-2xl">
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Maintenance <span class="text-primary">préventive</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Services de maintenance préventive et curative pour vos équipements électroniques industriels,
+              garantissant leur fiabilité et performance.
+            </p>
+            <button
+              class="bg-primary text-white px-8 py-4 !rounded-button text-lg font-semibold hover:bg-blue-600 transition-colors duration-300 whitespace-nowrap">
+              Demander un devis
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex space-x-3 mt-12">
+        <button class="slider-indicator w-3 h-3 rounded-full bg-primary transition-all duration-300"
+          data-slide="0"></button>
+        <button class="slider-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+          data-slide="1"></button>
+        <button class="slider-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+          data-slide="2"></button>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nos Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Solutions complètes en électronique industrielle et automatisation pour optimiser vos processus de production
+        </p>
+        <p class="text-sm text-gray-500 mt-4">Développé par Abdoul Gafoure Kaboré - Expert en électronique industrielle
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="ri-cpu-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Réparation Automates PLC</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Diagnostic et réparation d'automates programmables industriels, remise en état et optimisation des
+            performances.
+          </p>
+          <button
+            class="text-primary font-semibold hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">
+            En savoir plus →
+          </button>
+        </div>
+        <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="ri-code-line text-2xl text-secondary"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Programmation en C</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Développement de logiciels embarqués et programmation d'automates en langage C pour l'industrie.
+          </p>
+          <button
+            class="text-secondary font-semibold hover:text-purple-600 transition-colors duration-300 whitespace-nowrap">
+            En savoir plus →
+          </button>
+        </div>
+        <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+            <i class="ri-tools-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Maintenance Industrielle</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Maintenance préventive et curative d'équipements électroniques industriels et systèmes automatisés.
+          </p>
+          <button
+            class="text-primary font-semibold hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">
+            En savoir plus →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nos Réalisations</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Découvrez nos projets en électronique industrielle et automatisation
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="portfolio-filter px-6 py-3 !rounded-button bg-primary text-white font-medium whitespace-nowrap"
+            data-filter="all">
+            Tous les projets
+          </button>
+          <button
+            class="portfolio-filter px-6 py-3 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 font-medium transition-colors duration-300 whitespace-nowrap"
+            data-filter="plc">
+            Automates PLC
+          </button>
+          <button
+            class="portfolio-filter px-6 py-3 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 font-medium transition-colors duration-300 whitespace-nowrap"
+            data-filter="programming">
+            Programmation
+          </button>
+          <button
+            class="portfolio-filter px-6 py-3 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 font-medium transition-colors duration-300 whitespace-nowrap"
+            data-filter="maintenance">
+            Maintenance
+          </button>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+        <div class="project-card relative group overflow-hidden rounded-2xl shadow-lg" data-category="plc">
+          <img
+            src="https://readdy.ai/api/search-image?query=industrial%20PLC%20programmable%20logic%20controller%20repair%20and%20maintenance%2C%20electronic%20circuit%20boards%2C%20industrial%20automation%20equipment%2C%20technician%20working%20on%20control%20panel&width=400&height=300&seq=project1&orientation=landscape"
+            alt="Réparation Automate Siemens" class="w-full h-64 object-cover object-top">
+          <div
+            class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Automate Siemens S7-1200</h3>
+              <p class="text-gray-200">Réparation et reprogrammation complète</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card relative group overflow-hidden rounded-2xl shadow-lg" data-category="programming">
+          <img
+            src="https://readdy.ai/api/search-image?query=C%20programming%20code%20on%20computer%20screen%20for%20industrial%20automation%2C%20embedded%20software%20development%2C%20PLC%20programming%20interface%20with%20ladder%20logic&width=400&height=300&seq=project2&orientation=landscape"
+            alt="Programmation C Industrielle" class="w-full h-64 object-cover object-top">
+          <div
+            class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Système de Contrôle en C</h3>
+              <p class="text-gray-200">Développement logiciel embarqué</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card relative group overflow-hidden rounded-2xl shadow-lg" data-category="maintenance">
+          <img
+            src="https://readdy.ai/api/search-image?query=industrial%20electronics%20maintenance%20workshop%2C%20electronic%20testing%20equipment%2C%20multimeters%20and%20oscilloscopes%2C%20professional%20repair%20station%20with%20circuit%20boards&width=400&height=300&seq=project3&orientation=landscape"
+            alt="Maintenance Préventive" class="w-full h-64 object-cover object-top">
+          <div
+            class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Maintenance Préventive</h3>
+              <p class="text-gray-200">Ligne de production automobile</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card relative group overflow-hidden rounded-2xl shadow-lg" data-category="plc">
+          <img
+            src="https://readdy.ai/api/search-image?query=Allen%20Bradley%20PLC%20control%20panel%20installation%2C%20industrial%20control%20cabinet%20with%20wiring%2C%20professional%20electrical%20installation%20in%20factory%20environment&width=400&height=300&seq=project4&orientation=landscape"
+            alt="Installation Allen Bradley" class="w-full h-64 object-cover object-top">
+          <div
+            class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Automate Allen Bradley</h3>
+              <p class="text-gray-200">Installation et configuration complète</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card relative group overflow-hidden rounded-2xl shadow-lg" data-category="programming">
+          <img
+            src="https://readdy.ai/api/search-image?query=HMI%20human%20machine%20interface%20programming%2C%20industrial%20touchscreen%20display%20with%20control%20interface%2C%20SCADA%20system%20development&width=400&height=300&seq=project5&orientation=landscape"
+            alt="Interface HMI" class="w-full h-64 object-cover object-top">
+          <div
+            class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Interface HMI Personnalisée</h3>
+              <p class="text-gray-200">Développement SCADA avancé</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card relative group overflow-hidden rounded-2xl shadow-lg" data-category="maintenance">
+          <img
+            src="https://readdy.ai/api/search-image?query=industrial%20motor%20drive%20repair%2C%20variable%20frequency%20drive%20VFD%20maintenance%2C%20power%20electronics%20repair%20workshop%20with%20testing%20equipment&width=400&height=300&seq=project6&orientation=landscape"
+            alt="Réparation Variateurs" class="w-full h-64 object-cover object-top">
+          <div
+            class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <h3 class="text-xl font-semibold mb-2">Variateurs de Fréquence</h3>
+              <p class="text-gray-200">Réparation et modernisation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Témoignages Clients</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Découvrez ce que nos clients pensent de notre travail
+        </p>
+      </div>
+      <div class="relative">
+        <div id="testimonial-slider" class="overflow-hidden">
+          <div class="flex transition-transform duration-500" id="testimonial-track">
+            <div class="testimonial-card w-full flex-shrink-0 px-4">
+              <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=young%20African%20man%20portrait%2021%20years%20old%2C%20confident%20professional%20in%20modern%20office%2C%20clean%20background%2C%20professional%20headshot%20of%20young%20black%20entrepreneur&width=80&height=80&seq=client1-african&orientation=squarish"
+                    alt="Abdoul Gafoure Kaboré" class="w-16 h-16 rounded-full object-cover object-top mr-4">
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Abdoul Gafoure Kaboré</h4>
+                    <p class="text-gray-600">Fondateur, TechnoFix Pro</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg leading-relaxed italic">
+                  "TechnoFix Pro offre des solutions d'électronique industrielle exceptionnelles. Leur expertise en
+                  automates programmables et maintenance industrielle a considérablement amélioré nos processus de
+                  production."
+                </p>
+                <div class="flex text-yellow-400 mt-4">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card w-full flex-shrink-0 px-4">
+              <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=professional%20African%20business%20man%20portrait%2C%20confident%20black%20entrepreneur%20in%20suit%2C%20modern%20business%20headshot%20with%20clean%20background%2C%20young%20African%20professional&width=80&height=80&seq=client2-african&orientation=squarish"
+                    alt="Pierre Martin" class="w-16 h-16 rounded-full object-cover object-top mr-4">
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Pierre Martin</h4>
+                    <p class="text-gray-600">Fondateur, EcoSolutions</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg leading-relaxed italic">
+                  "Un travail exceptionnel sur notre application mobile. L'équipe a su allier design moderne et
+                  fonctionnalités avancées. Nous recommandons vivement Gaff Media."
+                </p>
+                <div class="flex text-yellow-400 mt-4">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card w-full flex-shrink-0 px-4">
+              <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=professional%20African%20business%20woman%20portrait%2C%20confident%20black%20female%20marketing%20director%20in%20modern%20office%2C%20young%20African%20professional%20headshot%20with%20clean%20background&width=80&height=80&seq=client3-african&orientation=squarish"
+                    alt="Sophie Laurent" class="w-16 h-16 rounded-full object-cover object-top mr-4">
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Sophie Laurent</h4>
+                    <p class="text-gray-600">Directrice Marketing, Fashion Hub</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg leading-relaxed italic">
+                  "Leur expertise en marketing digital nous a permis d'augmenter notre visibilité de 300%. Une équipe
+                  réactive et à l'écoute de nos besoins spécifiques."
+                </p>
+                <div class="flex text-yellow-400 mt-4">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center space-x-3 mt-8">
+          <button class="testimonial-indicator w-3 h-3 rounded-full bg-primary transition-all duration-300"
+            data-testimonial="0"></button>
+          <button
+            class="testimonial-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+            data-testimonial="1"></button>
+          <button
+            class="testimonial-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+            data-testimonial="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 text-center text-white">
+        <div>
+          <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="ri-user-heart-line text-2xl"></i>
+          </div>
+          <div class="counter text-4xl font-bold mb-2" data-target="150">0</div>
+          <p class="text-blue-100">Clients Satisfaits</p>
+        </div>
+        <div>
+          <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="ri-briefcase-line text-2xl"></i>
+          </div>
+          <div class="counter text-4xl font-bold mb-2" data-target="320">0</div>
+          <p class="text-blue-100">Projets Réalisés</p>
+        </div>
+        <div>
+          <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="ri-calendar-line text-2xl"></i>
+          </div>
+          <div class="counter text-4xl font-bold mb-2" data-target="8">0</div>
+          <p class="text-blue-100">Années d'Expérience</p>
+        </div>
+        <div>
+          <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="ri-award-line text-2xl"></i>
+          </div>
+          <div class="counter text-4xl font-bold mb-2" data-target="25">0</div>
+          <p class="text-blue-100">Prix Remportés</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contactez-nous</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Prêt à démarrer votre projet ? Parlons-en ensemble
+        </p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
+                <input type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+                <input type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
+              <input type="text"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300 resize-none"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-primary text-white py-4 !rounded-button text-lg font-semibold hover:bg-blue-600 transition-colors duration-300 whitespace-nowrap">
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+        <div class="space-y-8">
+          <div class="bg-gray-50 p-8 rounded-2xl">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Informations de contact</h3>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <i class="ri-map-pin-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900">Adresse</p>
+                  <p class="text-gray-600">123 Avenue des Champs-Élysées, 75008 Paris</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <i class="ri-phone-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900">Téléphone</p>
+                  <p class="text-gray-600">55 19 75 06</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <i class="ri-mail-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900">Email</p>
+                  <p class="text-gray-600">kaboreghafour55@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-2xl overflow-hidden h-64"
+            style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 class="text-2xl font-['Pacifico'] text-primary mb-6">TechnoFix Pro</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            Votre expert en électronique industrielle et automatisation pour optimiser vos processus de production.
+          </p>
+          <p class="text-sm text-gray-500 mb-6">Créé par Abdoul Gafoure Kaboré</p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Services</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors duration-300">Design Web</a></li>
+            <li><a href="#" class="hover:text-white transition-colors duration-300">Marketing Digital</a></li>
+            <li><a href="#" class="hover:text-white transition-colors duration-300">Applications Mobiles</a></li>
+            <li><a href="#" class="hover:text-white transition-colors duration-300">Branding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Liens Rapides</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="#services" class="hover:text-white transition-colors duration-300">Services</a></li>
+            <li><a href="#portfolio" class="hover:text-white transition-colors duration-300">Portfolio</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors duration-300">À propos</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+          <p class="text-gray-400 mb-4">Restez informé de nos dernières actualités</p>
+          <div class="flex">
+            <input type="email" placeholder="Votre email"
+              class="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+            <button
+              class="bg-primary px-6 py-3 rounded-r-lg hover:bg-blue-600 transition-colors duration-300 whitespace-nowrap">
+              <i class="ri-send-plane-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">© 2024 TechnoFix Pro - Créé par Abdoul Gafoure Kaboré. Tous droits réservés.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Mentions légales</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Politique de
+            confidentialité</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="./GafoureService.js"></script>
+</html>
